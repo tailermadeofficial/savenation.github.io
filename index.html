@@ -149,7 +149,7 @@
                 <h5 class="border">Want to serve our country ?</h5>
                 <!-- TABLE -->
 
-                <form class="form-box" action="javascript:" method="post" id="userinfo">
+                <form class="form-box" action="javascript:" method="post" id="volunteer">
 				
                     <div class="row">
                     <div class="column">
@@ -158,42 +158,42 @@
                     </div>
                     <div class="column">
                         <label>Mobile No :</label>
-                        <input type="text" name="mobilename" id="mobilename" required="required" maxlength="10" pattern="[789][0-9]{9}" />
+                        <input type="text" name="mobile" id="mobile" required="required" maxlength="10" pattern="[789][0-9]{9}" />
                     </div>
                     </div>
                     <div class="row_full">
                         <label>Address :</label>
-                                         <textarea name="message" id="message" required="required"></textarea>
+                                         <textarea name="address" id="address" required="required"></textarea>
                      </div>
                     <div class="row">
                     <div class="column">
-                                        <label>State :</label>
-                    <select class="select_drop" required="required" name="state" id="user_state">
-                    </select>
+                        <label>State :</label>
+                        <select class="select_drop" required="required" name="state" id="state">
+                        </select>
                     </div>
                     <div class="column">
-                    <label>District :</label>
-                    <select class="select_drop" required="required" name="district" id="user_district">
-                    </select>
+                        <label>District :</label>
+                        <select class="select_drop" required="required" name="district" id="district">
+                        </select>
                     </div>
                     </div>				
                                     
                     <div class="row_full">
                     <label>Intended Area Of Contribution :</label>
-                    <select class="select_drop" name="Contribution" id="message" required="required" cols="3">
+                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
                         <option name="Call Center" value="Call Center">Call Center</option>
-                        <option name="Call Center" value="Contact Tracking">Contact Tracking</option>
-                        <option name="Call Center" value="Sanitation and Disinfection">Sanitation and Disinfection</option>
-                        <option name="Call Center" value="Transportation">Transportation</option>
-                        <option name="Call Center" value="Web/Mobile app Development">Web/Mobile app Development</option>
-                        <option name="Call Center" value="Others">Others</option>
+                        <option name="Contact Tracking" value="Contact Tracking">Contact Tracking</option>
+                        <option name="Sanitation and Disinfection" value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+                        <option name="Transportation" value="Transportation">Transportation</option>
+                        <option name="Web/Mobile app Development" value="Web/Mobile app Development">Web/Mobile App Development</option>
+                        <option name="others" value="others">Others</option>
                     </select>
                     </div>						
                                     
                     <div class="row_full">
                                         <label>Comments :</label>
-                                        <textarea type="password" name="password" id="password" required="required" maxlength="15" /></textarea>
-                                        <input type="hidden" name="device-token" id="device-token" />
+                                        <textarea type="text" name="comments" id="comments" maxlength="150" /></textarea>
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
                     </div>
                     <div class="row_full">
                     <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
@@ -325,7 +325,7 @@
 <input type="hidden" name="device-token" id="device-token" />
 </div>
  <div class="row_full"> 
-                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
 </div>
                 </form>
 				
@@ -429,17 +429,16 @@ $(document).ready(function ()
 					dataType: 'json',
 					success:function(response) 
 					{
-
-if(response.status == true) 
-{
-$("#userinfo")[0].reset();
-$("#userinfo_error").html(response.messages);
-}
-else
-{
-$("#userinfo_error").html(response.messages);
-}
-$("#userinfo_error").delay(5000).fadeOut('slow');
+                        if(response.status == true) 
+                        {
+                            $("#userinfo")[0].reset();
+                            $("#userinfo_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#userinfo_error").html(response.messages);
+                        }
+                        $("#userinfo_error").delay(5000).fadeOut('slow');
 					
 					} // success
 					
@@ -463,17 +462,16 @@ $(document).ready(function ()
 					//dataType: 'json',
 					success:function(response) 
 					{
-
-if(response.status == true) 
-{
-$("#volunteer")[0].reset();
-$("#volunteer_error").html(response.messages);
-}
-else
-{
-$("#volunteer_error").html(response.messages);
-}
-$("#volunteer_error").delay(5000).fadeOut('slow');
+                        if(response.status == true) 
+                        {
+                            $("#volunteer")[0].reset();
+                            $("#volunteer_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#volunteer_error").html(response.messages);
+                        }
+                        $("#volunteer_error").delay(5000).fadeOut('slow');
 			
 					} // success
 					
@@ -497,16 +495,16 @@ $(document).ready(function ()
 					//dataType: 'json',
 					success:function(response) 
 					{
-if(response.status == true) 
-{
-$("#concern")[0].reset();
-$("#concern_error").html(response.messages);
-}
-else
-{
-$("#concern_error").html(response.messages);
-}
-$("#concern_error").delay(5000).fadeOut('slow');
+                        if(response.status == true) 
+                        {
+                            $("#concern")[0].reset();
+                            $("#concern_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#concern_error").html(response.messages);
+                        }
+                        $("#concern_error").delay(5000).fadeOut('slow');
 			
 					} // success
 					
@@ -529,11 +527,11 @@ $.each(data, function(key, value)
       countryOptions += '<option value="'+value.state+'">'+value.state+'</option>';
     });
 
-    $('#user_state').html(countryOptions);
+    $('#state').html(countryOptions);
   });
 
 
-$(document).on('change', '#user_state', function()
+$(document).on('change', '#state', function()
 {
 
 $district = $(this).val();
@@ -555,7 +553,7 @@ districtOptions += '<option value="'+val+'">'+val+'</option>';
 }
 });
 
-$('#user_district').html(districtOptions);
+$('#district').html(districtOptions);
 });
 
 

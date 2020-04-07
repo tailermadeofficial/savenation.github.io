@@ -538,3 +538,45 @@ h2.resp-tab-active {
 #cv-back-to-top:hover:before {
     color:#222;
 }
+
+.img-box
+{
+display: flex;
+height: 120px;
+border: 1px solid #ccc;
+box-shadow: 2px 3px 2px #ccc;
+}
+
+.img-width
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 3px;
+}
+
+@media screen and (max-width: 600px) 
+{
+.img-box
+{
+display: flex;
+height: 220px;
+border: 1px solid #ccc;
+box-shadow: 2px 3px 2px #ccc;
+}
+
+.img-width
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 10px;
+}
+
+}
+
+
+
+
+
+

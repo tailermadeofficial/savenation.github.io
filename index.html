@@ -52,19 +52,28 @@
                 <li><a href="#" class="cv-menu-button fa fa-bars">Menu</a>
                 </li>
                 <!-- PAGE 1 LINK -->
-                <li class="links-to-floor-li cv-active" data-id="1" data-slug="home"><a href="javascript:" class="fa fa-home tooltip-menu" title="HOME"></a>
+                <li class="links-to-floor-li cv-active" data-id="1" data-slug="home"><a href="javascript:" class="fa fa-home tooltip-menu" title="Home"></a>
                 </li>
                 <!-- PAGE 2 LINK -->
                 <li class="links-to-floor-li" data-id="2" data-slug="about-us"><a href="javascript:" class="fa fa-user tooltip-menu" title="About Us">About Us</a>
                 </li>
                 <!-- PAGE 3 LINK -->
-                <li class="links-to-floor-li" data-id="3" data-slug="concern"><a href="javascript:" class="fa fa-medkit tooltip-menu" title="Concern">Concern</a>
+                <li class="links-to-floor-li" data-id="3" data-slug="inter-state-travel"><a href="javascript:" class="fa fa-train tooltip-menu" title="Inter State Travel">Inter State Travel</a>
                 </li>
-                <!-- PAGE 4 LINK -->
-                <li class="links-to-floor-li" data-id="4" data-slug="volunteer"><a href="javascript:" class="fa fa-users tooltip-menu" title="Volunteer">Volunteer</a>
+				<!-- PAGE 4 LINK -->
+                <li class="links-to-floor-li" data-id="4" data-slug="inter-city-travel"><a href="javascript:" class="fa fa-bus tooltip-menu" title="Inter City Travel">Inter City Travel</a>
                 </li>
-                <!-- PAGE 5 LINK -->
-                <li class="links-to-floor-li" data-id="5" data-slug="contact"><a href="javascript:" class="fa fa-send tooltip-menu" title="CONTACT">Contact</a>
+				<!-- PAGE 5 LINK -->
+                <li class="links-to-floor-li" data-id="5" data-slug="grocery-food-medical"><a href="javascript:" class="fa fa-cutlery tooltip-menu" title="Grocery/ Food/ Medical">Grocery/ Food/ Medical</a>
+                </li>
+			    <!-- PAGE 6 LINK -->
+                <li class="links-to-floor-li" data-id="6" data-slug="support-us"><a href="javascript:" class="fa fa-ambulance tooltip-menu" title="Support Us">Support Us</a>
+                </li>
+                <!-- PAGE 7 LINK -->
+                <li class="links-to-floor-li" data-id="7" data-slug="volunteer"><a href="javascript:" class="fa fa-users tooltip-menu" title="Volunteer">Volunteer</a>
+                </li>
+                <!-- PAGE 8 LINK -->
+                <li class="links-to-floor-li" data-id="8" data-slug="contact-us"><a href="javascript:" class="fa fa-send tooltip-menu" title="Contact Us">Contact Us</a>
                 </li>
             </ul>
         </nav>
@@ -86,6 +95,11 @@
             <!-- 4. SLIDE -->
             <img src="images/photos/home5.png" alt="">
             <!-- 5. SLIDE -->
+			            <img src="images/photos/home5.png" alt="">
+            <!-- 6. SLIDE -->
+			            <img src="images/photos/home5.png" alt="">
+            <!-- 7. SLIDE -->
+						            <img src="images/photos/home5.png" alt="">
             <div>
               <!-- GOOGLE MAP -->
                 <div class="google-map-container">
@@ -212,6 +226,17 @@
                     </div>				
                                     
                     <div class="row_full">
+                    <label>Professional :</label>
+                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
+                        <option  value="Medical Professional">Medical Professional</option>
+                        <option  value="Working Professional">Working Professional</option>
+                        <option  value="Business Professional">Business Professional</option>
+                        <option  value="Student">Student</option>
+                        <option  value="others">Others</option>
+                    </select>
+                    </div>
+					
+					<div class="row_full">
                     <label>Intended Area Of Contribution :</label>
                     <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
                         <option name="Call Center" value="Call Center">Call Center</option>
@@ -250,7 +275,7 @@
                 <p>If you stuck in different state due to corona, you want to go to your home town please fill this form </p>
                 <!-- TABLE -->
 
-                <form class="form-box" action="javascript:" method="post" id="concern">
+                <form class="form-box" action="javascript:" method="post" id="state_travel">
 
 <div class="row">
   <div class="column">
@@ -265,7 +290,7 @@
 
 <div class="row">
   <div class="column">
-					<label>State :</label>
+					<label>From State :</label>
 <select class="select_drop" required="required" name="state" id="state">
 <option value="">Select State</option>
     <option value="1">1</option>
@@ -273,7 +298,26 @@
   </div>
   
 <div class="column">
-  <label>District :</label>
+  <label>From District :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select District</option>
+    <option  value="1">1</option>
+  </select>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+					<label>To State :</label>
+<select class="select_drop" required="required" name="state" id="state">
+<option value="">Select State</option>
+    <option value="1">1</option>
+  </select>
+  </div>
+  
+<div class="column">
+  <label>To District :</label>
 <select class="select_drop" required="required" name="district" id="district">
 <option value="">Select District</option>
     <option  value="1">1</option>
@@ -285,11 +329,6 @@
    <label>Address :</label>
                     <textarea name="message" id="message" required="required"></textarea>
 </div>
-
-<div class="row_full">					
-                    <label>Concern :</label>
-                    <input type="text" name="concern" id="concern" required="required" maxlength="50" />
-</div>					
 		
 <div class="row_full">			  
    <label>Comment :</label>
@@ -302,7 +341,7 @@
 </div>
                 </form>
 				
-<div id="concern_error"></div>
+<div id="state_travel_error"></div>
  
 		</div>
         </section>
@@ -311,16 +350,89 @@
         <section class="floor floor-4">
             <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
             <div class="img-mobile-only">
-                <img src="images/photos/home5.png" alt="" />
+                <img src="images/photos/home4.png" alt="" />
             </div>
             <!-- PAGE CONTENT -->
             <div class="cv-page-content">
-                <h2 class="border">Volunteer</h2>
-				
-                <p>If you want to become a warrior in this corona war, please fill this form.</p>
+            <h2 class="border">Inter-City Travel Help Need</h2>
+                <p>If you stuck in different state due to corona, you want to go to your home town please fill this form </p>
                 <!-- TABLE -->
 
-                <form class="form-box" action="javascript:" method="post" id="volunteer">
+                <form class="form-box" action="javascript:" method="post" id="city_travel">
+
+<div class="row">
+  <div class="column">
+                    <label>Name :</label>
+                    <input type="text" name="username" id="username" required="required" maxlength="20" />
+  </div>
+  <div class="column">
+                    <label>Mobile No :</label>
+                    <input type="text" name="mobilename" id="mobilename" required="required" maxlength="10" pattern="[789][0-9]{9}" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+					<label>From State :</label>
+<select class="select_drop" required="required" name="state" id="state">
+<option value="">Select State</option>
+    <option value="1">1</option>
+  </select>
+  </div>
+  
+<div class="column">
+  <label>From District :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select District</option>
+    <option  value="1">1</option>
+  </select>
+  </div>
+</div>
+
+<div class="row_full">
+  <label>To District :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select District</option>
+    <option  value="1">1</option>
+  </select>
+</div>
+
+
+<div class="row_full">
+   <label>Address :</label>
+                    <textarea name="message" id="message" required="required"></textarea>
+</div>
+		
+<div class="row_full">			  
+   <label>Comment :</label>
+                    <textarea name="comment" id="comment" required="required"></textarea>
+                    <input type="hidden" name="device-token" id="device-token" />
+</div>					
+					
+<div class="row_full">
+                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+</div>
+                </form>
+				
+<div id="city_travel_error"></div>
+ 
+		</div>
+        </section>
+		
+        <!-- PAGE 5 -->
+        <section class="floor floor-5">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <img src="images/photos/home4.png" alt="" />
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+            <h2 class="border">Grocery / Food / Medical Help Need</h2>
+                <p>If you stuck in different state due to corona, you want to go to your home town please fill this form </p>
+                <!-- TABLE -->
+
+                <form class="form-box" action="javascript:" method="post" id="grocery_food">
+
 <div class="row">
   <div class="column">
                     <label>Name :</label>
@@ -350,14 +462,195 @@
   </div>
 </div>
 
- <div class="row_full"> 
-<label>Address :</label>
-<textarea name="message" id="message" required="required"></textarea>
-<input type="hidden" name="device-token" id="device-token" />
+<div class="row_full">
+  <label>Type :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select Type</option>
+    <option  value="Grocery">Grocery</option>
+    <option  value="Food">Food</option>
+    <option  value="Medicine">Medicine</option>
+    <option  value="Other">Other</option>
+  </select>
 </div>
- <div class="row_full"> 
-    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+
+
+<div class="row_full">
+   <label>Address :</label>
+                    <textarea name="message" id="message" required="required"></textarea>
 </div>
+
+<div class="row_full">			  
+   <label>Comment :</label>
+                    <textarea name="comment" id="comment" required="required"></textarea>
+                    <input type="hidden" name="device-token" id="device-token" />
+</div>				
+					
+<div class="row_full">
+                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+</div>
+                </form>
+				
+<div id="grocery_food_error"></div>
+ 
+		</div>
+        </section>		
+		
+		
+        <!-- PAGE 6 -->
+        <section class="floor floor-6">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <img src="images/photos/home4.png" alt="" />
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+            <h2 class="border">Support Us</h2>
+                <p>If you stuck in different state due to corona, you want to go to your home town please fill this form </p>
+                <!-- TABLE -->
+
+                <form class="form-box" action="javascript:" method="post" id="support_us">
+
+<div class="row">
+  <div class="column">
+                    <label>Name :</label>
+                    <input type="text" name="username" id="username" required="required" maxlength="20" />
+  </div>
+  <div class="column">
+                    <label>Mobile No :</label>
+                    <input type="text" name="mobilename" id="mobilename" required="required" maxlength="10" pattern="[789][0-9]{9}" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+					<label>State :</label>
+<select class="select_drop" required="required" name="state" id="state">
+<option value="">Select State</option>
+    <option value="1">1</option>
+  </select>
+  </div>
+  
+<div class="column">
+  <label>District :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select District</option>
+    <option  value="1">1</option>
+  </select>
+  </div>
+</div>
+
+<div class="row_full">
+  <label>Intended Area Of Contribution :</label>
+<select class="select_drop" required="required" name="district" id="district">
+<option value="">Select Contribution</option>
+    <option  value="Sponsor Food">Sponsor Food</option>
+    <option  value="Sponsor Medicine">Sponsor Medicine</option>
+    <option  value="Sponsor Transportation">Sponsor Transportation</option>
+    <option  value="Social Activities">Social Activities</option>
+    <option  value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+    <option  value="Distribution">Distribution</option>
+    <option  value="Web/App Development">Web/App Development</option>
+    <option  value="Others">Others</option>
+  </select>
+</div>
+
+
+<div class="row_full">
+   <label>Address :</label>
+                    <textarea name="message" id="message" required="required"></textarea>
+</div>
+
+<div class="row_full">			  
+   <label>Comment :</label>
+                    <textarea name="comment" id="comment" required="required"></textarea>
+                    <input type="hidden" name="device-token" id="device-token" />
+</div>				
+					
+<div class="row_full">
+                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+</div>
+                </form>
+				
+<div id="support_us_error"></div>
+ 
+		</div>
+        </section>		
+		
+		
+		
+        <!-- PAGE 7 -->
+        <section class="floor floor-7">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <img src="images/photos/home5.png" alt="" />
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+                <h2 class="border">Volunteer</h2>
+				
+                <p>If you want to become a warrior in this corona war, please fill this form.</p>
+                <!-- TABLE -->
+
+                <form class="form-box" action="javascript:" method="post" id="volunteer">
+				
+                    <div class="row">
+                    <div class="column">
+                        <label>Name :</label>
+                        <input type="text" name="name" id="name" required="required" maxlength="20" />
+                    </div>
+                    <div class="column">
+                        <label>Mobile No :</label>
+                        <input type="text" name="mobile" id="mobile" required="required" maxlength="10" pattern="[789][0-9]{9}" />
+                    </div>
+                    </div>
+                    <div class="row_full">
+                        <label>Address :</label>
+                                         <textarea name="address" id="address" required="required"></textarea>
+                     </div>
+                    <div class="row">
+                    <div class="column">
+                        <label>State :</label>
+                        <select class="select_drop" required="required" name="state" id="state">
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label>District :</label>
+                        <select class="select_drop" required="required" name="district" id="district">
+                        </select>
+                    </div>
+                    </div>				
+					
+				<div class="row_full">
+                    <label>Professional :</label>
+                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
+                        <option  value="Medical Professional">Medical Professional</option>
+                        <option  value="Working Professional">Working Professional</option>
+                        <option  value="Business Professional">Business Professional</option>
+                        <option  value="Student">Student</option>
+                        <option  value="others">Others</option>
+                    </select>
+                </div>
+                                    
+                    <div class="row_full">
+                    <label>Intended Area Of Contribution :</label>
+                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
+                        <option name="Call Center" value="Call Center">Call Center</option>
+                        <option name="Contact Tracking" value="Contact Tracking">Contact Tracking</option>
+                        <option name="Sanitation and Disinfection" value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+                        <option name="Transportation" value="Transportation">Transportation</option>
+                        <option name="Web/Mobile app Development" value="Web/Mobile app Development">Web/Mobile App Development</option>
+                        <option name="others" value="others">Others</option>
+                    </select>
+                    </div>						
+                                    
+                    <div class="row_full">
+                                        <label>Comments :</label>
+                                        <textarea type="text" name="comments" id="comments" maxlength="150" /></textarea>
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
+                    </div>
+                    <div class="row_full">
+                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary" value="Send Message" />
+                    </div>
                 </form>
 				
 <div id="volunteer_error"></div>
@@ -368,8 +661,8 @@
 				
             </div>
         </section>
-        <!-- PAGE 5 -->
-        <section class="floor floor-5">
+        <!-- PAGE 8 -->
+        <section class="floor floor-8">
             <!-- MOBILE GOOGLE MAP -->
                 <div class="mobile-map-container">
                     <div id="mobile-map"></div>

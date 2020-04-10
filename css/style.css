@@ -366,9 +366,9 @@ form .cv-button {
 #cv-main-menu ul li a {
     display: block;
     text-indent: -500em;
-    height: 5em;
+    height: 4em;
     width: 5em;
-    line-height: 5em;
+    line-height: 4em;
     text-align: center;
     position: relative;
     outline: none !important;

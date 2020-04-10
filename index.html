@@ -69,10 +69,13 @@
 			    <!-- PAGE 6 LINK -->
                 <li class="links-to-floor-li" data-id="6" data-slug="support-us"><a href="javascript:" class="fa fa-ambulance tooltip-menu" title="Support Us">Support Us</a>
                 </li>
-                <!-- PAGE 7 LINK -->
-                <li class="links-to-floor-li" data-id="7" data-slug="volunteer"><a href="javascript:" class="fa fa-users tooltip-menu" title="Volunteer">Volunteer</a>
+							    <!-- PAGE 7 LINK -->
+                <li class="links-to-floor-li" data-id="" data-slug="Save Your Love"><a href="javascript:" class="fa fa-heartbeat tooltip-menu" title="Save Your Love">Save Your Love</a>
                 </li>
                 <!-- PAGE 8 LINK -->
+                <li class="links-to-floor-li" data-id="7" data-slug="volunteer"><a href="javascript:" class="fa fa-users tooltip-menu" title="Volunteer">Volunteer</a>
+                </li>
+                <!-- PAGE 9 LINK -->
                 <li class="links-to-floor-li" data-id="8" data-slug="contact-us"><a href="javascript:" class="fa fa-send tooltip-menu" title="Contact Us">Contact Us</a>
                 </li>
             </ul>
@@ -98,7 +101,7 @@
 			            <img src="images/photos/home5.png" alt="">
             <!-- 6. SLIDE -->
 			            <img src="images/photos/home5.png" alt="">
-            <!-- 7. SLIDE -->
+            <!--	 7. SLIDE -->
 						            <img src="images/photos/home5.png" alt="">
             <div>
               <!-- GOOGLE MAP -->
@@ -107,7 +110,7 @@
                 </div>  
             </div>
         </div>
-    </div>
+				</div>
     <!-- PAGES -->
     <div id="ascensorBuilding">
         <!-- PAGE 1 -->
@@ -196,7 +199,7 @@
                 <h5 class="border">Want to serve our country ?</h5>
                 <!-- TABLE -->
 
-                <form class="form-box" action="javascript:" method="post" id="volunteer">
+                <form class="form-box" action="javascript:" method="post" id="about_us">
 				
                     <div class="row">
                     <div class="column">
@@ -215,19 +218,20 @@
                     <div class="row">
                     <div class="column">
                         <label>State :</label>
-                        <select class="select_drop" required="required" name="state" id="state">
+                        <select class="select_drop" required="required" name="state" id="aboutus_state">
                         </select>
                     </div>
                     <div class="column">
                         <label>District :</label>
-                        <select class="select_drop" required="required" name="district" id="district">
+                        <select class="select_drop" required="required" name="district" id="aboutus_district">
                         </select>
                     </div>
                     </div>				
                                     
                     <div class="row_full">
                     <label>Professional :</label>
-                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
+                    <select class="select_drop" name="professional" id="professional" required="required" cols="3">
+                        <option  value="">Choose Your Professional</option>
                         <option  value="Medical Professional">Medical Professional</option>
                         <option  value="Working Professional">Working Professional</option>
                         <option  value="Business Professional">Business Professional</option>
@@ -239,12 +243,14 @@
 					<div class="row_full">
                     <label>Intended Area Of Contribution :</label>
                     <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
-                        <option name="Call Center" value="Call Center">Call Center</option>
-                        <option name="Contact Tracking" value="Contact Tracking">Contact Tracking</option>
-                        <option name="Sanitation and Disinfection" value="Sanitation and Disinfection">Sanitation and Disinfection</option>
-                        <option name="Transportation" value="Transportation">Transportation</option>
-                        <option name="Web/Mobile app Development" value="Web/Mobile app Development">Web/Mobile App Development</option>
-                        <option name="others" value="others">Others</option>
+                        <option value="">Choose Your Contribution</option>
+                        <option value="Call Center">Call Center</option>
+                        <option  value="Contact Tracking">Contact Tracking</option>
+                        <option  value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+                        <option  value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+                        <option  value="Transportation">Transportation</option>
+                        <option  value="Web/Mobile app Development">Web/Mobile App Development</option>
+                        <option  value="others">Others</option>
                     </select>
                     </div>						
                                     
@@ -258,7 +264,7 @@
                     </div>
                 </form>
 				
-                <div id="userinfo_error"></div>
+                <div id="about_us_error"></div>
 
                 <hr/>
             </div>
@@ -291,17 +297,13 @@
 <div class="row">
   <div class="column">
 					<label>From State :</label>
-<select class="select_drop" required="required" name="state" id="state">
-<option value="">Select State</option>
-    <option value="1">1</option>
+<select class="select_drop" required="required" name="state" id="from_inter_state">
   </select>
   </div>
   
 <div class="column">
   <label>From District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
+<select class="select_drop" required="required" name="district" id="from_inter_district">
   </select>
   </div>
 </div>
@@ -310,17 +312,13 @@
 <div class="row">
   <div class="column">
 					<label>To State :</label>
-<select class="select_drop" required="required" name="state" id="state">
-<option value="">Select State</option>
-    <option value="1">1</option>
+<select class="select_drop" required="required" name="state" id="to_inter_state">
   </select>
   </div>
   
 <div class="column">
   <label>To District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
+<select class="select_drop" required="required" name="district" id="to_inter_district">
   </select>
   </div>
 </div>
@@ -333,7 +331,7 @@
 <div class="row_full">			  
    <label>Comment :</label>
                     <textarea name="comment" id="comment" required="required"></textarea>
-                    <input type="hidden" name="device-token" id="device-token" />
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
 </div>					
 					
 <div class="row_full">
@@ -374,27 +372,21 @@
 <div class="row">
   <div class="column">
 					<label>From State :</label>
-<select class="select_drop" required="required" name="state" id="state">
-<option value="">Select State</option>
-    <option value="1">1</option>
+<select class="select_drop" required="required" name="state" id="from_inter_city_state">
   </select>
   </div>
   
 <div class="column">
   <label>From District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
+<select class="select_drop" required="required" name="district" id="from_inter_city_district">
   </select>
   </div>
 </div>
 
 <div class="row_full">
   <label>To District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
-  </select>
+<select class="select_drop" required="required" name="district" id="to_inter_city_district">
+</select>
 </div>
 
 
@@ -406,7 +398,7 @@
 <div class="row_full">			  
    <label>Comment :</label>
                     <textarea name="comment" id="comment" required="required"></textarea>
-                    <input type="hidden" name="device-token" id="device-token" />
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
 </div>					
 					
 <div class="row_full">
@@ -447,17 +439,13 @@
 <div class="row">
   <div class="column">
 					<label>State :</label>
-<select class="select_drop" required="required" name="state" id="state">
-<option value="">Select State</option>
-    <option value="1">1</option>
+<select class="select_drop" required="required" name="state" id="grocery_state">
   </select>
   </div>
   
 <div class="column">
   <label>District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
+<select class="select_drop" required="required" name="district" id="grocery_district">
   </select>
   </div>
 </div>
@@ -465,7 +453,7 @@
 <div class="row_full">
   <label>Type :</label>
 <select class="select_drop" required="required" name="district" id="district">
-<option value="">Select Type</option>
+<option value="">Select Your Type</option>
     <option  value="Grocery">Grocery</option>
     <option  value="Food">Food</option>
     <option  value="Medicine">Medicine</option>
@@ -482,7 +470,7 @@
 <div class="row_full">			  
    <label>Comment :</label>
                     <textarea name="comment" id="comment" required="required"></textarea>
-                    <input type="hidden" name="device-token" id="device-token" />
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
 </div>				
 					
 <div class="row_full">
@@ -524,25 +512,21 @@
 <div class="row">
   <div class="column">
 					<label>State :</label>
-<select class="select_drop" required="required" name="state" id="state">
-<option value="">Select State</option>
-    <option value="1">1</option>
+<select class="select_drop" required="required" name="state" id="support_us_state">
   </select>
   </div>
   
 <div class="column">
   <label>District :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select District</option>
-    <option  value="1">1</option>
+<select class="select_drop" required="required" name="district" id="support_us_district">
   </select>
   </div>
 </div>
 
 <div class="row_full">
   <label>Intended Area Of Contribution :</label>
-<select class="select_drop" required="required" name="district" id="district">
-<option value="">Select Contribution</option>
+<select class="select_drop" required="required" name="contribution" id="contribution">
+<option value="">Select Your Contribution</option>
     <option  value="Sponsor Food">Sponsor Food</option>
     <option  value="Sponsor Medicine">Sponsor Medicine</option>
     <option  value="Sponsor Transportation">Sponsor Transportation</option>
@@ -563,7 +547,7 @@
 <div class="row_full">			  
    <label>Comment :</label>
                     <textarea name="comment" id="comment" required="required"></textarea>
-                    <input type="hidden" name="device-token" id="device-token" />
+                                        <input type="hidden" name="deviceType" id="deviceType" value="web" />
 </div>				
 					
 <div class="row_full">
@@ -610,12 +594,12 @@
                     <div class="row">
                     <div class="column">
                         <label>State :</label>
-                        <select class="select_drop" required="required" name="state" id="state">
+                        <select class="select_drop" required="required" name="state" id="volunteer_state">
                         </select>
                     </div>
                     <div class="column">
                         <label>District :</label>
-                        <select class="select_drop" required="required" name="district" id="district">
+                        <select class="select_drop" required="required" name="district" id="volunteer_district">
                         </select>
                     </div>
                     </div>				
@@ -623,6 +607,7 @@
 				<div class="row_full">
                     <label>Professional :</label>
                     <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
+                        <option  value="">Select Your Professional</option>
                         <option  value="Medical Professional">Medical Professional</option>
                         <option  value="Working Professional">Working Professional</option>
                         <option  value="Business Professional">Business Professional</option>
@@ -633,13 +618,14 @@
                                     
                     <div class="row_full">
                     <label>Intended Area Of Contribution :</label>
-                    <select class="select_drop" name="contribution" id="contribution" required="required" cols="3">
-                        <option name="Call Center" value="Call Center">Call Center</option>
-                        <option name="Contact Tracking" value="Contact Tracking">Contact Tracking</option>
-                        <option name="Sanitation and Disinfection" value="Sanitation and Disinfection">Sanitation and Disinfection</option>
-                        <option name="Transportation" value="Transportation">Transportation</option>
-                        <option name="Web/Mobile app Development" value="Web/Mobile app Development">Web/Mobile App Development</option>
-                        <option name="others" value="others">Others</option>
+                    <select class="select_drop" name="contribution" id="contribution" required="required">
+                        <option  value="">Select Your Contribution</option>
+                        <option  value="Call Center">Call Center</option>
+                        <option  value="Contact Tracking">Contact Tracking</option>
+                        <option  value="Sanitation and Disinfection">Sanitation and Disinfection</option>
+                        <option  value="Transportation">Transportation</option>
+                        <option  value="Web/Mobile app Development">Web/Mobile App Development</option>
+                        <option value="others">Others</option>
                     </select>
                     </div>						
                                     
@@ -731,10 +717,10 @@
     <!-- LIGHTGALLERY -->
     <script type="text/javascript" src="js/lightgallery.js"></script>
     <script type="text/javascript" src="js/galleries.js"></script>
-    <!-- GOOGLE MAP -->
-    <script type="text/javascript" src="js/googlemap.js"></script>
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="js/home-custom.js"></script>
+	   <!-- State city JS -->
+    <script type="text/javascript" src="js/state-city.js"></script>
 
    
 	
@@ -837,64 +823,7 @@ $(document).ready(function ()
 	});	
 </script>	
 
-<script>
-$(document).ready(function()
-{
-var countryOptions = '';
-var districtOptions = '';
 
-$.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select State</option>';
-
-$.each(data, function(key, value)
-{
-      countryOptions += '<option value="'+value.state+'">'+value.state+'</option>';
-    });
-
-    $('#state').html(countryOptions);
-  });
-
-
-$(document).on('change', '#state', function()
-{
-
-$district = $(this).val();
-
-
-$.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select District</option>';
-
-$.each(data, function(key, value)
-{
-if($district == value.state)
-{
-
-$.each(value.districts, function(key, val)
-{
-districtOptions += '<option value="'+val+'">'+val+'</option>';
-});
-
-}
-});
-
-$('#district').html(districtOptions);
-});
-
-
-});
-
-/*    $.getJSON("js/states-districts.json",function(obj)
-   {
-         $.each(json.cars,function(key,value)
-         {
-             var option = $('<option />').val(value.carID).text(value.CarType);
-        $("#user_state").append(option);
-         });
-
-    });*/
-
-});
-</script>
 
 
 	

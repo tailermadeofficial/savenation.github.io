@@ -366,9 +366,9 @@ form .cv-button {
 #cv-main-menu ul li a {
     display: block;
     text-indent: -500em;
-    height: 5em;
+    height: 4em;
     width: 5em;
-    line-height: 5em;
+    line-height: 4em;
     text-align: center;
     position: relative;
     outline: none !important;
@@ -688,11 +688,11 @@ form .cv-button {
     margin: 0px;
 }
 #home-title h1 span, #home-slide-title span {
-    font-size: 60px;
+    font-size: 44px;
     margin: 0px;
 }
 #home-title h1 span, #home-slide-title span{
-    padding: 40px 60px;
+    padding: 36px 56px;
     display: inline-block;
     line-height: 1;
 }
@@ -1718,5 +1718,18 @@ padding: 10px;
   .column-4 {
     width: 100%;
   }
+}
+
+.alert_msg
+{
+padding: 10px;
+
+background-color: #de3926;
+
+color: #fff;
+
+margin: 10px;
+
+display: block;	
 }
 

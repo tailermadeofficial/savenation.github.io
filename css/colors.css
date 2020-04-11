@@ -106,7 +106,7 @@ textarea:focus {
 }
 /* ================= PAGE STRUCTURE ================== */
 .cv-page-content {
-    border-bottom: 50px solid #fff;
+/* border-bottom: 50px solid #fff; */
 }
 #cv-page-right {
     background-color: #fff;
@@ -206,6 +206,7 @@ textarea:focus {
 #home-title p{
     color: #222;
     background-color: #fff;
+	box-shadow: 3px 5px 8px #ccc;
 }
 /* ================= HOME SOCIAL BAR ================== */
 #cv-home-social-bar ul li a {
@@ -524,7 +525,7 @@ h2.resp-tab-active {
 }
 /* ================= FOOTER ================== */
 #footer {
-    background-color: rgba(243,243,243,0.9);
+    background-color: rgb(248, 249, 254);
 }
 .cv-credits a {
     color: #949494;

@@ -7,7 +7,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -27,7 +27,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -56,7 +56,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -76,7 +76,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -106,7 +106,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -126,7 +126,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -157,7 +157,7 @@ var districtOptions = null;
 
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -177,7 +177,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -208,7 +208,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -228,7 +228,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -257,7 +257,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -277,7 +277,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -307,7 +307,7 @@ var countryOptions = null;
 var districtOptions = null;
 
 $.getJSON('js/states-districts.json', function(data){
-    countryOptions += '<option value="">Select Your State</option>';
+    countryOptions += '<option value=" ">Select Your State</option>';
 
 $.each(data, function(key, value)
 {
@@ -327,7 +327,7 @@ $district = $(this).val();
 
 
 $.getJSON('js/states-districts.json', function(data){
-    districtOptions += '<option value="">Select Your District</option>';
+    districtOptions += '<option value=" ">Select Your District</option>';
 
 $.each(data, function(key, value)
 {
@@ -346,3 +346,207 @@ $('#volunteer_district').html(districtOptions);
 });
 });
 });
+
+
+/********************************/
+/* About Us Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#about_us").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/volunteer",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#about_us")[0].reset();
+                            $("#about_us_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#about_us_error").html(response.messages);
+                        }
+                        $("#about_us_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});	
+	
+/********************************/
+/* Volunteer Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#volunteer").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/volunteer",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#volunteer")[0].reset();
+                            $("#volunteer_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#volunteer_error").html(response.messages);
+                        }
+                        $("#volunteer_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});		
+	
+/********************************/
+/* Inter-State Travel Help Need Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#state_travel").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/Statetravel",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#state_travel")[0].reset();
+                            $("#state_travel_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#state_travel_error").html(response.messages);
+                        }
+                        $("#state_travel_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});			
+	
+/********************************/
+/* Inter-City Travel Help Need Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#city_travel").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/Citytravel",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#city_travel")[0].reset();
+                            $("#city_travel_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#city_travel_error").html(response.messages);
+                        }
+                        $("#city_travel_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});			
+	
+/********************************/
+/* Grocery / Food / Medical Help Need Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#grocery_food").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/Groceryfood",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#grocery_food")[0].reset();
+                            $("#grocery_food_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#grocery_food_error").html(response.messages);
+                        }
+                        $("#grocery_food_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});			
+/********************************/
+/* Support Us Api */
+/*******************************/
+$(document).ready(function () 
+	{
+	$("#support_us").unbind('submit').bind('submit', function() {
+			var form = $(this);
+
+					$.ajax({
+					url : "https://tailermade.com/corona/apps/dashboard/Supportus",
+					type : "Post",
+					data: new FormData(this),
+                    contentType: false,  
+                    processData:false,
+					dataType: 'json',
+					success:function(response) 
+					{
+                        if(response.status == true) 
+                        {
+                            $("#support_us")[0].reset();
+                            $("#support_us_error").html(response.messages);
+                        }
+                        else
+                        {
+                            $("#support_us_error").html(response.messages);
+                        }
+                        $("#support_us_error").delay(5000).fadeOut('slow');
+					
+					} // success
+					
+				}); // ajax subit 				
+		});
+	});		

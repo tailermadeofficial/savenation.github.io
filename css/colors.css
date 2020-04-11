@@ -106,7 +106,7 @@ textarea:focus {
 }
 /* ================= PAGE STRUCTURE ================== */
 .cv-page-content {
-    border-bottom: 50px solid #fff;
+/* border-bottom: 50px solid #fff; */
 }
 #cv-page-right {
     background-color: #fff;
@@ -524,7 +524,7 @@ h2.resp-tab-active {
 }
 /* ================= FOOTER ================== */
 #footer {
-    background-color: rgba(243,243,243,0.9);
+    background-color: rgb(248, 249, 254);
 }
 .cv-credits a {
     color: #949494;

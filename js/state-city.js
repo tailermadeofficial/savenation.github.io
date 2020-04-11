@@ -3,6 +3,11 @@
 /*******************************/
 $(document).ready(function()
 {
+	
+$("input#mobile").keypress(function(event) {
+  return /\d/.test(String.fromCharCode(event.keyCode));
+});	
+	
 var countryOptions = null;
 var districtOptions = null;
 
@@ -368,11 +373,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#about_us")[0].reset();
-                            $("#about_us_error").html(response.messages);
+                            $("#about_us_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#about_us_error").html(response.messages);
+                            $("#about_us_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#about_us_error").delay(5000).fadeOut('slow');
 					
@@ -402,11 +407,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#volunteer")[0].reset();
-                            $("#volunteer_error").html(response.messages);
+                            $("#volunteer_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#volunteer_error").html(response.messages);
+                            $("#volunteer_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#volunteer_error").delay(5000).fadeOut('slow');
 					
@@ -436,11 +441,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#state_travel")[0].reset();
-                            $("#state_travel_error").html(response.messages);
+                            $("#state_travel_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#state_travel_error").html(response.messages);
+                            $("#state_travel_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#state_travel_error").delay(5000).fadeOut('slow');
 					
@@ -470,11 +475,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#city_travel")[0].reset();
-                            $("#city_travel_error").html(response.messages);
+                            $("#city_travel_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#city_travel_error").html(response.messages);
+                            $("#city_travel_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#city_travel_error").delay(5000).fadeOut('slow');
 					
@@ -504,11 +509,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#grocery_food")[0].reset();
-                            $("#grocery_food_error").html(response.messages);
+                            $("#grocery_food_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#grocery_food_error").html(response.messages);
+                            $("#grocery_food_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#grocery_food_error").delay(5000).fadeOut('slow');
 					
@@ -537,11 +542,11 @@ $(document).ready(function ()
                         if(response.status == true) 
                         {
                             $("#support_us")[0].reset();
-                            $("#support_us_error").html(response.messages);
+                            $("#support_us_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         else
                         {
-                            $("#support_us_error").html(response.messages);
+                            $("#support_us_error").html('<span class="alert_msg">'+response.messages+'</span>');
                         }
                         $("#support_us_error").delay(5000).fadeOut('slow');
 					

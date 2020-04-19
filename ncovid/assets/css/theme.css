@@ -985,13 +985,18 @@ PRELOADER AREA
     box-shadow: 2px 3px 2px #ccc;
 }
 
-.img-width {
+.img-box img {
+    padding: 15px;
+     margin: 0px auto;
+}
+
+/*.img-width {
     width: 100%;
     height: auto;
     margin: auto;
     padding: 3px;
 }
-
+*/
 .main-img {
     width: 200px;
     height: 50px;
@@ -1057,4 +1062,10 @@ width: 38%;
     padding: 10px;
 }
 
+}
+
+.model_head_bg
+{
+background-color: #eb4559 !important;
+color: #fff !important;	
 }

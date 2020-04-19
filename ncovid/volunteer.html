@@ -7,6 +7,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+<meta name="title" content="Save My Nation | Student community initiative volunteering movement">
+<meta name="description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
+<meta name="keywords" content="coronavirus,corona,covid,covid19,covid-19,covidindia,india,virus,student,student-community,student-initiative,student-volunteering,student-movement,volunteering">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.savemynation.com">
+<meta property="og:title" content="Save My Nation | Student community initiative volunteering movement">
+<meta property="og:description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
+<meta property="og:image" content="/icon.png">
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.savemynation.com">
+<meta property="twitter:title" content="Save My Nation | Student community initiative volunteering movement">
+<meta property="twitter:description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
+<meta property="twitter:image" content="assets/img/icon/fabicon.png"">
+
+
+
+
     <!--:::::FABICON ICON:::::::-->
     <link rel="icon" href="assets/img/icon/fabicon.png">
     <!--::::: CSS FILES:::::::-->
@@ -92,7 +116,7 @@
 <div class="title">
                             <p class="title__top">Covid-19</p>
                             <h2>Volunteer</h2>
-							                <p>If you want to become a warrior in this corona war, please fill this form.</p>
+							                <p>If you want to join us as a volunteer to combat COVID-19, please fill this form.</p>
 </div>
 
 <hr/>
@@ -106,7 +130,7 @@
 	
 <div class="form-group">
     <label for="Mobile_No">Mobile No :</label>
-    <input type="tel" name="mobile" id="mobile" required="required" maxlength="10" pattern="[789][0-9]{9}" class="form-control">
+    <input type="tel" name="mobile" id="mobile" required="required" maxlength="10" pattern="[6789][0-9]{9}" class="form-control">
 </div>	
 		
 <div class="form-group">
@@ -116,13 +140,13 @@
 
 <div class="form-group">
                         <label>State :</label>
-                        <select class="form-control" required="required" name="state" id="aboutus_state">
+                        <select class="form-control"  name="state" id="aboutus_state">
                         </select>				
 </div>			
 
 <div class="form-group">                     
 					 <label>District :</label>
-                        <select class="form-control" required="required" name="district" id="aboutus_district">
+                        <select class="form-control"  name="district" id="aboutus_district">
                         </select>	
 </div>				
 
@@ -192,15 +216,13 @@
                                         <div class="space-30"></div>
                                         
                                         <div class="btn__group">
-                                            <a href="#" class="cbtn emergency_btn">
-                                                <img class="btn__icon" src="assets/img/icon/alert__phone.svg" alt=""> 
-                                                <img class="btn__hover__icon" src="assets/img/icon/alert__phone__white.svg" alt=""> 
-                                                 Call 
+                                            <a href="https://www.pmindia.gov.in/en/" target="_blank" class="cbtn emergency_btn">
+                                                <i class="fa fa-user-plus" aria-hidden="true"></i>  
+                                                 Donate Now
                                             </a>
-                                            <a href="#" class="cbtn emergency_btn">
-                                                <img class="btn__icon" src="assets/img/icon/calender__red.png" alt=""> 
-                                                <img class="btn__hover__icon" src="assets/img/icon/calender.png" alt=""> 
-                                                 Need Help
+                                            <a href="volunteer.html" class="cbtn emergency_btn">
+<i class="fa fa-users" aria-hidden="true"></i>  
+                                                 Volunteer
                                             </a>
                                             
                                         </div>
@@ -234,6 +256,27 @@
     </div>
     <!--:::::FOOTER AREA END :::::::-->
 
+<!-- model -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header model_head_bg">
+          <h4 class="modal-title">Save My Nation</h4>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-center"><strong>Thank You.</strong></h4>
+		  <p> Your Message Successfully Sent.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- model -->
 
     <!--:::::ALL JS FILES :::::::-->
     <script src="assets/js/plugins/jQuery.2.1.0.min.js"></script>
@@ -253,9 +296,39 @@
     buttons: [
       "facebook", "twitter", "pinterest", "linkedin", "whatsapp", 
     ],
-    text: "share with: ",
-    url: ""
+    text: "Save My Nation | Student community initiative volunteering movement",
+    url: "https://savemynation.com/"
   });
 </script>
+
+
+<script>
+getLocation();
+
+function getLocation() 
+{
+
+if(navigator.geolocation) 
+{
+navigator.geolocation.watchPosition(showPosition);
+navigator.geolocation.getCurrentPosition(showPosition);
+} 
+}
+    
+function showPosition(position) 
+{
+$('.device_latitude').each(function()
+{
+$(this).val(position.coords.latitude);
+});
+
+$('.device_longitude').each(function()
+{
+$(this).val(position.coords.longitude);
+});
+
+}
+</script>
+
 </body>
 </html>

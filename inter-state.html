@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Save My Nation - Student initiative to fight against Covid-19</title>
+<title>Save My Nation - State Travel Help</title>
 
     <!--::::: SUPPORT META :::::::-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<meta name="title" content="Save My Nation | Student community initiative volunteering movement">
+
+<meta name="title" content="Save My Nation | State Travel Help">
 <meta name="description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
 <meta name="keywords" content="coronavirus,corona,covid,covid19,covid-19,covidindia,india,virus,student,student-community,student-initiative,student-volunteering,student-movement,volunteering">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.savemynation.com">
-<meta property="og:title" content="Save My Nation | Student community initiative volunteering movement">
+<meta property="og:url" content="https://www.savemynation.com/inter-state.html">
+<meta property="og:title" content="Save My Nation | State Travel Help">
 <meta property="og:description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
 <meta property="og:image" content="/icon.png">
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="512" />
 <meta property="og:image:height" content="512" />
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.savemynation.com">
-<meta property="twitter:title" content="Save My Nation | Student community initiative volunteering movement">
+<meta property="twitter:url" content="https://www.savemynation.com/inter-state.html">
+<meta property="twitter:title" content="Save My Nation | State Travel Help">
 <meta property="twitter:description" content="Student Volunteer-driven community initiative to solve the impacts of Coronavirus (COVID-19) in India">
-<meta property="twitter:image" content="assets/img/icon/fabicon.png"">
+<meta property="twitter:image" content="assets/img/icon/fabicon.png">
 
     <!--:::::FABICON ICON:::::::-->
     <link rel="icon" href="assets/img/icon/fabicon.png">
@@ -80,13 +80,11 @@
                         <div class="stellarnav">
                             <ul class="navclass" id="scroll">
                              <li><a href="index.html">Home</a></li>
-                                
                                 <li><a href="index.html">About</a></li>
-                                <li><a href="inter-state.html">Inter State Travel</a></li>
-                                <li><a href="inter-city.html">Inter City Travel</a></li>
-                                <li><a href="grocery.html">Medical</a></li>
-
-                                <li class="current"><a href="support.html">Support Us</a></li>
+                                <li class="current"><a href="inter-state.html">State Travel Help</a></li>
+                                <li><a href="inter-city.html">City Travel Help</a></li>
+                                <li><a href="grocery.html">Essentials</a></li>
+                                <li><a href="support.html">Join with Us</a></li>
                                 <li><a href="volunteer.html">Volunteer</a></li>
                             </ul>
                         </div>
@@ -111,14 +109,14 @@
 
 
 <div class="title">
-                            <p class="title__top">Support</p>
-                            <h2>Join Hands With Us</h2>
-							<p>If you want to participate in this movement to help people, please fill this form.</p>
+                            <p class="title__top">State Travel</p>
+                            <h2>State Travel Help</h2>
+							<p>If you are stuck in other state, unable to travel back to your hometown due to COVID-19, please fill this form.</p>
 </div>
 
 <hr/>
 
-                 <form class="form-box" action="javascript:" method="post" id="support_us">
+                <form class="form-box" action="javascript:" method="post" id="state_travel">
 				
 <div class="form-group">
     <label for="name">Name :</label>
@@ -132,41 +130,43 @@
 		
 		
 <div class="form-group">
-                        <label>State :</label>
-                        <select class="form-control" required="required" name="state" id="support_us_state">
+                        <label>From State :</label>
+                        <select class="form-control" required="required" name="from_state" id="from_inter_state">
                         </select>				
 </div>			
 
 <div class="form-group">                     
-					 <label>District :</label>
-                        <select class="form-control" required="required" name="district" id="support_us_district">
+					 <label>From District :</label>
+                        <select class="form-control" required="required" name="from_district" id="from_inter_district">
                         </select>	
 </div>		
 		
 
+<div class="form-group">
+                        <label>To State :</label>
+                        <select class="form-control" required="required" name="to_state" id="to_inter_state">
+                        </select>				
+</div>			
 
 <div class="form-group">                     
-  <label>Intended Area Of Contribution :</label>
-                        <select class="form-control" required="required" name="contribution" id="contribution">
-<option value="">Select Your Contribution</option>
-    <option  value="Sponsor Food">Sponsor Food</option>
-    <option  value="Sponsor Medicine">Sponsor Medicine</option>
-    <option  value="Sponsor Transportation">Sponsor Transportation</option>
-    <option  value="Social Activities">Social Activities</option>
-    <option  value="Sanitation and Disinfection">Sanitation and Disinfection</option>
-    <option  value="Distribution">Distribution</option>
-    <option  value="Web/App Development">Web/App Development</option>
-    <option  value="Others">Others</option>
-  </select>	
+					 <label>To District :</label>
+                        <select class="form-control" required="required" name="to_district" id="to_inter_district">
+                        </select>	
 </div>			
 		
 		
 		
 		
 <div class="form-group">
-    <label for="Address">Address :</label>
+    <label for="Address">From Address :</label>
 	                                         <textarea name="address" id="address" class="form-control" required="required"></textarea>
  </div>		
+
+
+<div class="form-group">
+    <label for="Address">To Address :</label>
+	                                         <textarea name="to_address" id="to_address" class="form-control" required="required"></textarea>
+ </div>
 
 
 
@@ -181,9 +181,10 @@
                     <input type="submit" id="sendMessage" name="sendMessage" class="btn-sty cv-button primary" value="Send Message" />
 
                 </form>
-				
-				                <hr/>
-<div id="support_us_error"></div>
+                <hr/>				
+                <div id="state_travel_error"></div>
+
+
 				
 <!-- form -->				
 				</div>
@@ -196,44 +197,44 @@
 </div>
 
 
-    <!--::::: CTA AREA  START::::::-->
-    <div class="cta__area theme__bg2__haf">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="cta">
-                        <div class="cta_wrap">
-                            <div class="row">
-                                <div class="col-lg-8 m-auto text-center">
-                                    <div class="title">
-                                        <h2>Join hands with us</h2>
-                                        <h4>Join this movement to fight against invisible enemy to our socity.</h4>
-                                        <div class="space-30"></div>
-                                        
-                                        <div class="btn__group">
-                                            <a href="https://www.savemynation/support.html" class="cbtn emergency_btn">
-                                                <i class="fa fa-user-plus" aria-hidden="true"></i>  
-                                                 Join Hands with Us
-                                            </a>
-                                            <a href="https://www.savemynation/volunteer.html" class="cbtn emergency_btn">
+   <!--::::: CTA AREA  START::::::-->
+   <div class="cta__area theme__bg2__haf">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cta">
+                    <div class="cta_wrap">
+                        <div class="row">
+                            <div class="col-lg-8 m-auto text-center">
+                                <div class="title">
+                                    <h2>Join hands with us</h2>
+                                    <h4>Join this movement to fight against invisible enemy to our socity.</h4>
+                                    <div class="space-30"></div>
+                                    
+                                    <div class="btn__group">
+                                        <a href="https://www.savemynation/support.html" class="cbtn emergency_btn">
+                                            <i class="fa fa-user-plus" aria-hidden="true"></i>  
+                                             Join Hands with Us
+                                        </a>
+                                        <a href="https://www.savemynation/volunteer.html" class="cbtn emergency_btn">
 <i class="fa fa-users" aria-hidden="true"></i>  
-                                                 Become Warrior
-                                            </a>
-                                            
-                                        </div>
+                                             Become Warrior
+                                        </a>
+                                        
                                     </div>
                                 </div>
-                        </div>
-                        
-                        <img src="assets/img/shape/shape__white2.png" alt="" class="cta__img cta__img1">
-                        <img src="assets/img/shape/shape__white2.png" alt="" class="cta__img cta__img2">
                             </div>
                     </div>
+                    
+                    <img src="assets/img/shape/shape__white2.png" alt="" class="cta__img cta__img1">
+                    <img src="assets/img/shape/shape__white2.png" alt="" class="cta__img cta__img2">
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--::::: CTA AREA END :::::::-->
+</div>
+<!--::::: CTA AREA END :::::::-->
 
 
     <!--:::::FOOTER AREA START :::::::-->
@@ -250,7 +251,6 @@
         <img class="footer_shape  footer_shapes5" src="assets/img/shape/shape__white2.png" alt="">
     </div>
     <!--:::::FOOTER AREA END :::::::-->
-
 <!-- model -->
 
   <!-- Modal -->
